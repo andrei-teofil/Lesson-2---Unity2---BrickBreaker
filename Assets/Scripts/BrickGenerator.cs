@@ -11,14 +11,16 @@ public class BrickGenerator : MonoBehaviour
     {
         for (float x = -3; x <= 3; x+=1.5f)
         {
-            for (float z = 0; z <= 3; z+=1.5f)
+            for (int z = 0; z < 3; z++)
             {
-                Instantiate(
+                var newBrick = Instantiate(
                     brick, 
-                    new Vector3(x, 0.25f, z), 
+                    new Vector3(x, 0.25f, z*1.5f), 
                     Quaternion.identity, 
                     transform
                 );
+
+                newBrick.health = z+1;
             }  
         }
     }

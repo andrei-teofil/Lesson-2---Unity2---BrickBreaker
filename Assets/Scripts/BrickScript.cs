@@ -25,4 +25,17 @@ public class BrickScript : MonoBehaviour
     {
         
     }
+
+    void OnCollisionEnter(Collision collision) {
+        if(collision.gameObject.CompareTag("Ball")) {
+            health--;
+
+            if(health == 0) {
+                Destroy(gameObject);
+            }
+            else {
+                GetComponent<Renderer>().material.color = colors[health-1];
+            }
+        }
+    }
 }
