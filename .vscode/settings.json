@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Lesson 2 - Unity2 - BrickBreaker.sln"
+    "dotnet.defaultSolution": "Lesson-2---Unity2---BrickBreaker.sln"
 }
