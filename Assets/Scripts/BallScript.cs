@@ -6,6 +6,9 @@ public class BallScript : MonoBehaviour
 {
     int speed = 5;
     Rigidbody ballRb;
+    const int DEATH_Z = -6;
+
+    public GameController controller;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +22,10 @@ public class BallScript : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.Space)){
             ballRb.AddForce(0,0,-speed, ForceMode.Force);
+        }
+
+        if(transform.position.z < DEATH_Z){
+            controller.ManageRestart(true);
         }
     }
 

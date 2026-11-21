@@ -20,7 +20,7 @@ public class BrickGenerator : MonoBehaviour
                     transform
                 );
 
-                newBrick.health = z+1;
+                newBrick.health = z + GameController.level;
             }  
         }
     }
